@@ -2,12 +2,8 @@ FROM alpine/git AS clone
 COPY . /data
 WORKDIR /data
 
-# Initialize and update submodules, and force latest commit
-RUN git submodule update --init --recursive \
-    && cd themes/hugo-profile \
-    && git fetch origin \
-    && git checkout master \
-    && git pull origin master
+RUN rm -rf themes/*
+RUN git clone https://github.com/kamahell87/hugo-profile.git
 
 # Build the Hugo site
 FROM klakegg/hugo:ext-ubuntu-onbuild AS build
@@ -16,7 +12,7 @@ COPY --from=clone /data /data
 WORKDIR /data
 
 # Build the site, include drafts if needed
-RUN hugo -D --theme hugo-profile
+RUN hugo -D
 
 # Serve the site with NGINX
 FROM nginx:alpine
