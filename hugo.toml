@@ -1,3 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://sysadmin.marcodaleo.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'MD SysAdmin'
+theme = 'hello-friend-ng'
