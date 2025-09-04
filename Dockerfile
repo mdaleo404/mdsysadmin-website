@@ -2,8 +2,12 @@ FROM alpine/git AS clone
 COPY . /data
 WORKDIR /data
 
-# Ensure submodules are initialized and updated
-RUN git submodule update --init --recursive
+# Initialize and update submodules, and force latest commit
+RUN git submodule update --init --recursive \
+    && cd themes/hugo-profile \
+    && git fetch origin \
+    && git checkout master \
+    && git pull origin master
 
 # Build the Hugo site
 FROM klakegg/hugo:ext-ubuntu-onbuild AS build
