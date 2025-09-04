@@ -7,7 +7,7 @@ RUN git clone https://github.com/mdaleo404/mdsysadmin-website.git
 
 # Building the site with Hugo
 
-FROM klakegg/hugo:0.107.0-ext AS build
+FROM klakegg/hugo:ext-ubuntu-onbuild AS build
 COPY --from=clone /data /data
 WORKDIR /data
 RUN hugo -D
