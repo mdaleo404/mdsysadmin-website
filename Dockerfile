@@ -12,7 +12,7 @@ COPY --from=clone /data /data
 WORKDIR /data
 
 # Build the site, include drafts if needed
-RUN hugo -D
+RUN hugo -D --theme hugo-profile
 
 # Serve the site with NGINX
 FROM nginx:alpine
