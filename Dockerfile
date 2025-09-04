@@ -1,9 +1,10 @@
-# Cloning the repository
+# Cloning the theme
 
 FROM alpine/git AS clone
 COPY . /data
 WORKDIR /data
-RUN git clone https://github.com/mdaleo404/mdsysadmin-website.git
+RUN rm -rf themes/*
+RUN git clone https://github.com/mdaleo404/hugo-profile.git themes/hugo-profile
 
 # Building the site with Hugo
 
