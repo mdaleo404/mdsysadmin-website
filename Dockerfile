@@ -3,7 +3,7 @@ COPY . /data
 WORKDIR /data
 
 RUN rm -rf themes/*
-RUN git clone https://github.com/kamahell87/hugo-profile.git
+RUN git clone https://github.com/kamahell87/hugo-profile.git themes/hugo-profile
 
 # Build the Hugo site
 FROM klakegg/hugo:ext-ubuntu-onbuild AS build
