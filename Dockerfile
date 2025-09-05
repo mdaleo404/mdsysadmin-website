@@ -1,20 +1,24 @@
-FROM alpine/git AS clone
-COPY . /data
-WORKDIR /data
+# prepare source with submodules
+FROM alpine/git AS source
+WORKDIR /src
 
-#RUN rm -rf themes/*
-#RUN git clone https://github.com/mdaleo404/hugo-profile.git themes/hugo-profile
+# Copy repo into the container
+COPY . .
 
-# Build the Hugo site
+# Make sure submodules are initialized and updated
+RUN git submodule update --init --recursive
+
+# build with Hugo
 FROM klakegg/hugo:ext-ubuntu-onbuild AS build
-# Copy everything from the clone stage
-COPY --from=clone /data /data
-WORKDIR /data
+WORKDIR /src
 
-# Build the site, include drafts if needed
-RUN hugo -D
+# Copy prepared source (with submodules)
+COPY --from=source /src /src
 
-# Serve the site with NGINX
+# Build the site
+RUN hugo --minify
+
+# Stage 3: serve with NGINX
 FROM nginx:alpine
-# Copy the generated static site to NGINX root
-COPY --from=build /data/public /usr/share/nginx/html
+COPY --from=build /src/public /usr/share/nginx/html
+
