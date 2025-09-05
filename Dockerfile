@@ -9,7 +9,7 @@
 #RUN git submodule update --init --recursive
 
 # build with Hugo
-FROM klakegg/hugo:ext-ubuntu-onbuild AS build
+FROM ghcr.io/gohugoio/hugo:v0.149.1 AS build
 WORKDIR /src
 
 # Copy prepared source (with submodules)
