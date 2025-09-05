@@ -114,11 +114,13 @@ Highly motivated Linux System Administrator experienced in Linux, AWS, OpenTofu,
   enable = true
 
     [[params.experience.items]]
-    # job = "Senior Software Developer"
+    job = "Keeping servers secure, stable, and up to date"
     company = "Maintenance"
     # companyUrl = "https://example.com"
     # date = "Jan 2022 - present"
-    content = "Before anything else, regular patching, configuration and maintenance are the keys to a healthy system."
+    content = """
+Comprehensive Linux system maintenance designed to ensure stability, security, and long-term reliability. Services include regular patching, performance optimisation, troubleshooting, and security hardening to protect against vulnerabilities. With proactive upkeep and responsive issue resolution, infrastructure remains resilient, reducing downtime and maintaining business continuity.
+"""
 
       [params.experience.items.featuredLink]
       enable = false
@@ -126,15 +128,12 @@ Highly motivated Linux System Administrator experienced in Linux, AWS, OpenTofu,
       url = "https://example.com"
 
     [[params.experience.items]]
-    job = "Software Developer"
-    company = "Amazon"
-    companyUrl = "https://example.com"
-    date = "Sep 2020 - Dec 2021"
+    job = "Save time and eliminate errors with smarter workflows"
+    company = "Automation"
+    # companyUrl = "https://example.com"
+    # date = "Sep 2020 - Dec 2021"
     content = """
-I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-- Lead backend developer for a product.
-- Created a frontend design for a product.
+End-to-end automation solutions built with Python, Bash, and Ansible to replace repetitive manual processes with efficient, error-free workflows. This includes automated server provisioning, configuration management, and task orchestration across environments. By introducing infrastructure as code and reliable automation frameworks, systems remain consistent, scalable, and easier to manage over time.
 """
 
       [params.experience.items.featuredLink]
@@ -142,19 +141,16 @@ I am currently working as a software developer at [example org.](https://example
       url = "https://example.com"
 
       [params.experience.items.info]
-      enable = true
+      enable = false
       content = "I worked as a software developer for more than one year in Amazon."
 
     [[params.experience.items]]
-    job = "Junior Software Developer"
-    company = "Apple"
-    companyUrl = "https://example.com"
-    date = "Jan 2020 - Aug 2020"
+    job = "Fast, reliable, and risk-free software releases"
+    company = "Deployment"
+    # companyUrl = "https://example.com"
+    # date = "Jan 2020 - Aug 2020"
     content = """
-I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-- Lead backend developer for a product.
-- Created a frontend design for a product.
+Design and implementation of robust CI/CD pipelines using tools such as Jenkins, enabling smooth integration, automated testing, and repeatable deployments. Deployment pipelines are tailored to fit development workflows, reducing manual intervention and release risk. This approach accelerates delivery cycles, increases release frequency, and ensures software is deployed reliably every time.
 """
 
       [params.experience.items.info]
@@ -165,27 +161,17 @@ I am currently working as a software developer at [example org.](https://example
       url = "https://example.com"
 
     [[params.experience.items]]
-    job = "UI/UX Designer"
-    company = "Netflix"
-    companyUrl = "https://example.com"
-    date = "June 2017 - Nov 2019"
+    job = "Proactive insights to prevent downtime before it happens"
+    company = "Monitoring"
+    # companyUrl = "https://example.com"
+    # date = "June 2017 - Nov 2019"
     content = """
-I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-- Lead backend developer for a product.
-- Created a frontend design for a product.
+Custom monitoring solutions that provide full visibility into system health, application performance, and security. Leveraging log analysis, metrics collection, and alerting, issues are identified early and resolved before they impact users. Proactive monitoring reduces outages, improves system resilience, and enables data-driven decision-making to maintain service reliability and optimise infrastructure performance.
 """
 
       [params.experience.items.featuredLink]
       enable = false
       url = "https://example.com"
-
-    [[params.experience.items]]
-    job = "Product Designer"
-    company = "Google"
-    companyUrl = "https://example.com"
-    date = "Feb 2016 - Mar 2017"
-    content = "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
 
 #   [params.education]
 #   enable = false
@@ -324,7 +310,7 @@ I am currently working as a software developer at [example org.](https://example
   enable = true
   content = "Feel free to send me a message, I’ll try my best to get back to you as soon as I can!"
   btnName = "Contact me"
-  btnLink = ""
+  btnLink = "mailto:sysadmin@marcodaleo.com"
 
 # [params.footer.recentPosts]
 # path = "blogs"
