@@ -2,8 +2,8 @@ FROM alpine/git AS clone
 COPY . /data
 WORKDIR /data
 
-RUN rm -rf themes/*
-RUN git clone https://github.com/mdaleo404/hugo-profile.git themes/hugo-profile
+#RUN rm -rf themes/*
+#RUN git clone https://github.com/mdaleo404/hugo-profile.git themes/hugo-profile
 
 # Build the Hugo site
 FROM klakegg/hugo:ext-ubuntu-onbuild AS build
