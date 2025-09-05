@@ -13,10 +13,7 @@ FROM ghcr.io/gohugoio/hugo:v0.149.1 AS build
 WORKDIR /src
 
 # Copy prepared source (with submodules)
-COPY --from=source /src /src
-
-# Fix permissions so Hugo user can write
-RUN chown -R hugo:hugo /src
+COPY --chown=hugo:hugo --from=source /src /src
 
 # Build the site
 RUN hugo --minify
