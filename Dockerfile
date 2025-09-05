@@ -1,19 +1,19 @@
 # prepare source with submodules
-#FROM alpine/git AS source
-#WORKDIR /src
+FROM alpine/git AS source
+WORKDIR /src
 
 # Copy repo into the container
-#COPY . .
+COPY . .
 
 # Make sure submodules are initialized and updated
-#RUN git submodule update --init --recursive
+RUN git submodule update --init --recursive
 
 # build with Hugo
 FROM ghcr.io/gohugoio/hugo:v0.149.1 AS build
 WORKDIR /src
 
 # Copy prepared source (with submodules)
-#COPY --from=source /src /src
+COPY --from=source /src /src
 
 # Build the site
 RUN hugo --minify
