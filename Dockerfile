@@ -15,6 +15,9 @@ WORKDIR /src
 # Copy prepared source (with submodules)
 COPY --from=source /src /src
 
+# Fix permissions so Hugo user can write
+RUN chown -R hugo:hugo /src
+
 # Build the site
 RUN hugo --minify
 
