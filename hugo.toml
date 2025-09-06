@@ -54,8 +54,8 @@ animate = true
 
     [params.navbar.menus]
     disableAbout = false
-    disableExperience = false
-    disableEducation = true
+    disableExperience = true
+    disableEducation = false
     disableProjects = true
     disableAchievements = true
     disableContact = false
@@ -111,7 +111,7 @@ Highly motivated Linux System Administrator experienced in Linux, AWS, OpenTofu,
 # company > skill
 # job > service
   [params.experience]
-  enable = true
+  enable = false
 
     [[params.experience.items]]
     job = "Keeping servers secure, stable, and up to date"
@@ -173,35 +173,45 @@ Custom monitoring solutions that provide full visibility into system health, app
       enable = false
       url = "https://example.com"
 
-#   [params.education]
-#   enable = false
-#   index = false
+  [params.education]
+  enable = true
+  index = false
 
-#     [[params.education.items]]
-#     title = "Master of Business Administration"
-#     date = "2013 - 2015"
-#     GPA = "3.8 out of 5.0"
-#     content = """
-# Extracurricular Activities
-#   - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-#   - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique."""
+    [[params.education.items]]
+    title = "Keeping servers secure, stable, and up to date"
+    date = "Maintenance"
+    # GPA = "3.8 out of 5.0"
+    content = """
+Comprehensive Linux system maintenance designed to ensure stability, security, and long-term reliability. Services include regular patching, performance optimisation, troubleshooting, and security hardening to protect against vulnerabilities. With proactive upkeep and responsive issue resolution, infrastructure remains resilient, reducing downtime and maintaining business continuity.
+"""
 
 #       [params.education.items.school]
 #       name = "University of California, Berkeley"
 #       url = "https://example.org"
 
-#     [[params.education.items]]
-#     title = "Bachelor of Science in Computer Science"
-#     date = "2009 - 2013"
-#     GPA = "3.9 out of 5.0"
-#     content = """
-# I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-# - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-# - Face mask detection using a single convolutional neural network.
+    [[params.education.items]]
+    title = "Save time and eliminate errors with smarter workflows"
+    date = "Automation"
+    # GPA = "3.9 out of 5.0"
+    content = """
+End-to-end automation solutions built with Python, Bash, and Ansible to replace repetitive manual processes with efficient, error-free workflows. This includes automated server provisioning, configuration management, and task orchestration across environments. By introducing infrastructure as code and reliable automation frameworks, systems remain consistent, scalable, and easier to manage over time.
+"""
 
-# Extracurricular Activities
-#   - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-#   - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique."""
+    [[params.education.items]]
+    title = "Fast, reliable, and risk-free software releases"
+    date = "Deployment"
+    # GPA = "3.9 out of 5.0"
+    content = """
+Design and implementation of robust CI/CD pipelines using tools such as Jenkins, enabling smooth integration, automated testing, and repeatable deployments. Deployment pipelines are tailored to fit development workflows, reducing manual intervention and release risk. This approach accelerates delivery cycles, increases release frequency, and ensures software is deployed reliably every time.
+"""
+
+    [[params.education.items]]
+    title = "Proactive insights to prevent downtime before it happens"
+    date = "Monitoring"
+    # GPA = "3.9 out of 5.0"
+    content = """
+Custom monitoring solutions that provide full visibility into system health, application performance, and security. Leveraging log analysis, metrics collection, and alerting, issues are identified early and resolved before they impact users. Proactive monitoring reduces outages, improves system resilience, and enables data-driven decision-making to maintain service reliability and optimise infrastructure performance.
+"""
 
 #       [params.education.items.school]
 #       name = "Massachusetts Institute of Technology"
